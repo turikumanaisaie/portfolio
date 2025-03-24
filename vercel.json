@@ -1,7 +1,11 @@
 {
   "rewrites": [
     { "source": "/hardware", "destination": "/hardware.html" },
-    { "source": "/software", "destination": "/software.html" }
+    { "source": "/software", "destination": "/software.html" },
+    { "source": "/tieflab/features", "destination": "/index.html#features" },
+    { "source": "/", "destination": "/index.html" },
   ],
-  "errorPage": "/404.html"
+  "redirects": [
+    { "source": "/404", "destination": "/404.html", "statusCode": 404 }
+  ]
 }
