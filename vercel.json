@@ -3,7 +3,7 @@
     { "source": "/hardware", "destination": "/hardware.html" },
     { "source": "/software", "destination": "/software.html" },
     { "source": "/tieflab/features", "destination": "/index.html#features" },
-    { "source": "/", "destination": "/index.html" },
+    { "source": "/", "destination": "/index.html" }
   ],
   "redirects": [
     { "source": "/404", "destination": "/404.html", "statusCode": 404 }
