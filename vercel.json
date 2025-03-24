@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/hardware", "destination": "/hardware.html" },
+    { "source": "/software", "destination": "/software.html" }
+  ],
+  "errorPage": "/404.html"
+}

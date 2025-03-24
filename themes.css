@@ -1,0 +1,60 @@
+:root {
+    --bgs-color: #f0f4f8;
+    --bg-color: #d8e6f3;
+    --text-color: #292828;
+    --accent-color: #4a90e2;
+    --nav-height: 80px;
+    --white: #fff;
+    --secondry: #e1e1e19e;
+    --primary-color: #0d49a5;
+    --text-color: #333333;
+    --card-bgs: #f8f9fa;
+    --card-bg: #f4faff;
+    --shadow: rgba(0,0,0,0.2);
+    --shadow1: rgba(41,40,40,0.2);
+    --shadow2: rgba(41,40,40,0.3);
+    --shadow3: rgba(41,40,40,0.05);
+    --shadow4: rgba(0, 191, 255, 0.8);
+    --shadow5: rgba(0, 191, 255, 0.5);
+    --shadow6: rgba(0, 191, 255, 0.1);
+    --shadow7: rgba(100, 100, 111, 0.2);
+    --snw1:  #292828;
+    --cls1: #00bfff;
+    --snw: #d8e6f3;
+    --center1: #0077ff;
+    --sub: #333;
+    --subs: #666;
+    --hover1:rgba(216, 230, 243, 0.5);
+    --bg-card:  rgba(255, 255, 255, 0.2);
+    --transition: all 0.3s ease;
+    }
+
+[data-theme="dark"] {
+    --bgs-color: #1a1a1a;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #4a90e2;
+    --primary-color: #1e90ff;
+    --secondary: #333333;
+    --white: #ffffff;
+    --card-bg: #1e1e1e;
+    --card-bgs: #2a2a2a;
+    --shadow: rgba(255, 255, 255, 0.1);
+    --shadow1: rgba(255, 255, 255, 0.2);
+    --shadow2: rgba(255, 255, 255, 0.3);
+    --shadow3: rgba(255, 255, 255, 0.05);
+    --shadow4: rgba(0, 191, 255, 0.8);
+    --shadow6: rgba(0, 191, 255, 0.1);
+    --shadow5: rgba(0, 191, 255, 0.5);
+    --shadow4: rgba(0, 191, 255, 0.8);
+    --shadow6: rgba(0, 191, 255, 0.1);
+    --shadow7: rgba(255, 255, 255, 0.1);
+    --snw1: #e0e0e0;
+    --cls1: #000;
+    --snw: #00bfff;
+    --center1: #0077ff;
+    --sub: #cccccc;
+    --subs: #999999;
+    --hover1: rgba(255, 255, 255, 0.1);
+    --bg-card: rgba(255, 255, 255, 0.05);
+}

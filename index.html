@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- Created Sunday, March 23, 2025  by Turikumana Isaie-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="src/isaie.png">
+    <link rel="icon" type="image/x-icon" href="src/isaie1.ico">
+    <title>Turikumana Isaie ● Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+ <!-- loading  -->
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    font-family: "Jost", sans-serif;
+}
+:root{
+    /*   loading colors*/
+    --main-bg-color: #1e1d20;
+    --ather-bg-color: #545454;
+    --button-color: #98d4df;
+    --button-border-color: #87ceeb;
+    --online-color: #ebff07;
+    --link-color: #bee3ed;
+/*    --text-color: #fff;*/
+    --message-color: #8e8c8c;
+
+    --yes-color: #acff9c;
+    --main-color: #87ceeb;
+    --progress-bar: #a2e4ff;
+}
+/*Loading for all Pages*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    transition: opacity 1.75s, visibility 1.75s;
+    z-index: 10000000;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader_brand-container{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.loader_brand{
+    margin-top: -36%;
+    scale: 20%;
+    user-select: none;
+}
+.loader_footer{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader_footer-text{
+    position: absolute;
+    font-size: 15px;
+    color: var(--message-color);
+    margin-top: -40px;
+    font-weight: 600;
+    font-family:'Jost', sans-serif;
+    scale: 102%;
+}
+.loader_footer-brand{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    scale: 102%;
+}
+.loader_footer-brand a{
+    position: relative;
+    text-decoration: none;
+    color: var(--link-color);
+    font-family:'Poppins', sans-serif;
+}
+.loader::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    height:  5px;
+    width: 100%;
+    background: linear-gradient( to left, 
+                var(--yes-color), var(--main-color),
+                var(--yes-color), var(--main-color),
+                var(--yes-color), var(--main-color),
+                var(--yes-color), var(--main-color));
+
+    background-size: 500%;
+    animation: loader 2.5s linear infinite;
+}
+
+
+
+@keyframes loader {
+     0%{
+    background-position: 0 100%;
+  }
+   50%{
+    background-position:  100% 0;
+  }
+   100%{
+    background-position: 0 100%;
+  }
+   150%{
+    background-position:  100% 0;
+  }
+}
+    </style>
+    <!-- loading js  -->
+    <script>
+            
+    // loader
+window.addEventListener('DOMContentLoaded', () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  })
+});
+    </script>
+</head>
+<body>
+    <!-- Loader branding -->
+<div class="loader">
+    <div class="loader_brand-container">
+        <img class="loader_brand" src="src/isaie.png">
+        <div class="loader_footer">
+            <p class="loader_footer-text">By</p>
+            <p class="loader_footer-brand">
+                <a href="https://www.youtube.com/@tutikumanaisaie">▱tieflab▰</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <!-- loader brand ends -->
+
+
+    <div class="snowfall" id="snowfall"></div>
+
+    <nav class="nav">
+        <div class="logo">
+            <img src="src/isaie.jpg" width="40px" class="name">
+            Turikumana Isaie
+        </div>
+        <div class="nav-links">
+            <a href="#features"><i class='bx bx-briefcase' ></i> work</a>
+            <a href="hardware.html"><i class='bx bx-chip' ></i> Hardware</a>
+            <a href="software.html"><i class='bx bx-code-alt' ></i> Software</a>
+            <a href="https://tief-software-truth.creator-spring.com/?page=2"><i class='bx bx-shopping-bag' ></i> March</a>
+            <a href="https://www.patreon.com/turikumanaisaie"><i class='bx bx-donate-heart' ></i> Donate</a>
+            <span class="theme-toggle" id="themeToggle">
+                <i class='bx bx-moon'></i>
+            </span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">I'm Profession, In Hardware and Software</h1>
+                <p class="hero-subtitle">
+                    I am skilled in Software Dvelopment and electronics engineer with over 8 years in web development, Graphic design, IoT, PCB design and 3D Design.
+                </p>
+                <button class="cta-button" onclick="window.open('src/cv.pdf')">Download My CV</button>
+            </div>
+            <div class="mehere">
+            <img src="src/mehere1.png">
+
+             <div class="title-bar">
+               <span class="title-text">I'm A</span>
+               <span class="changing-title" id="changingTitle">Electronics Engineer</span>
+            </div>
+
+            </div>
+        </section>
+
+      <section class="features" id="features">
+        <div class="feature-card" style="animation-delay: 0.2s">
+            <h3><i class='bx bxs-microchip' ></i> Electronics hardware</h3>
+            <p>Innovations in Embeded System, IOT, CNC, Robotics, Drones, Laser cutting, ESPs, Arduino and Repear.</p>
+        </div>
+        <div class="feature-card" style="animation-delay: 0.4s">
+            <h3><i class='bx bxs-collection' ></i> Software Development</h3>
+            <p>Developing Desktop & Phone apps, Web design, Python, Node.js, Game and Embeded OS.</p>
+        </div>
+        <div class="feature-card" style="animation-delay: 0.6s">
+            <h3><i class='bx bxs-user'></i> Me & My Tech life</h3>
+            <p>This Portfolio is about my life, future, thoughts, innovations, my career and Languages.</p>
+        </div>
+          <div class="skill-card">
+                <h2>Electronics</h2>
+                <ul>
+                    <li><i class='bx bx-chevron-right'></i> Soldering - 100%</li>
+                    <li><i class='bx bx-chevron-right'></i> Componets Layout - 64%</li>
+                    <li><i class='bx bx-chevron-right'></i> Troubleshooting - 99%</li>
+                    <li><i class='bx bx-chevron-right'></i> Design & Testing - 80%</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h2>Programming</h2>
+                <ul>
+                    <li><i class='bx bx-chevron-right'></i> HTML CSS - 100%</li>
+                    <li><i class='bx bx-chevron-right'></i> Python - 75%</li>
+                    <li><i class='bx bx-chevron-right'></i> Arduino C/C++ - 75%</li>
+                    <li><i class='bx bx-chevron-right'></i> Javascript - 20%</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h2>Languages</h2>
+                <ul>
+                    <li><i class='bx bx-chevron-right'></i> Kinyarwanda (Native)</li>
+                    <li><i class='bx bx-chevron-right'></i> English - 75%</li>
+                    <li><i class='bx bx-chevron-right'></i> Russian - 30%</li>
+                    <li><i class='bx bx-chevron-right'></i> Japanese - 10%</li>
+                </ul>
+            </div>
+      </section>
+      <style type="text/css">
+          ul{
+            list-style: none;
+          }
+      </style>
+    </main>
+        <!-- Skills Section (from previous version) -->
+     <div class="roadmap_header">
+        <h2 class="roadmap_title">My Tech Career Roadmap (2018-2025)</h2>
+        <p class="roadmap_subtitle">
+            I am <span class="highlight" data-image="src/isaie.jpg">Isaie</span> a creative technologist,  skilled in
+            <span class="highlight" data-image="src/hardware.png">hardware</span> and also
+            <span class="highlight" data-image="src/software.png">software</span>, 
+            IoT integration, inspiring others through creative problem-solving and engaging educational projects.
+        </p>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="imagePopup" class="image-popup">
+        <img id="popupImage" src="" alt="Preview Image">
+    </div>
+   <section class="timeline">
+    
+    <div class="timeline-item">
+        <h3>2018 - Electronics Beginnings</h3>
+        <p>
+            I Created a <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/h19a9420-04e22.jpg"> Paper radio project </span>, gained recognition from Igihe News and Flash TV, and received a  million <span class="highlight" data-image="https://igihe.com/IMG/arton104808.jpg">scholarships </span> along with a laptop from AC Group.
+        </p>
+        <span class="tag hardware">Hardware</span>
+    </div>
+
+    <div class="timeline-item">
+        <h3>2019 - Expanding Skill Set</h3>
+        <p>
+            I Joined the <span class="highlight" data-image="src/fablab.png">fablab Rwanda</span> got a <span class="highlight" data-image="src/hardware.jpg">membership </span> and studied CNC, laser cutting, Eagle PCB design, SolidWorks, and PCB assembly and Arduino.
+        </p>
+        <span class="tag hardware">Hardware</span>
+    </div>
+
+    <div class="timeline-item">
+        <h3>2020 - Building A Robotics</h3>
+        <p>
+           I Developed a <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaies-robot-1.jpg.webp">robot car</span> with various sensors also woonden <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaie-foran-huset-med-radioen-1.jpg">Clock </span>, and I had an interview with <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaie-rasmus-og-sofie-med-robot-300x300.jpg">UNSEF Denmark</span>, and began studying programming and web development.
+        </p>
+        <span class="tag robotics">Robotics</span>
+    </div>
+
+    <div class="timeline-item">
+        <h3>2021 - Digital Content Creation</h3>
+        <p>
+            I Launched the <span class="highlight" data-image="src/software.png">Tief Software Lab</span> YouTube channel to teach web design and created a gas disaster prevention device.
+        </p>
+        <span class="tag software">Software</span>
+    </div>
+
+    <div class="timeline-item">
+        <h3>2022 - Electronics Tutorials</h3>
+        <p>
+           I Started another YouTube channel focused on <span class="highlight" data-image="src/hardware.png"> electronics </span> tutorials, expanding my tech educational Hobby.
+        </p>
+        <span class="tag hardware">Hardware</span>
+    </div>
+
+   <div class="timeline-item">
+    <h3>2022 - Gas Leak Detector</h3>
+    <p>
+        Designed a <span class="highlight" data-image="src/gas.png"> smart gas leak detector </span> to enhance home safety. The system alerted users to gas leaks, preventing hazards.
+    </p>
+    <span class="tag hardware">Hardware</span>
+  </div>
+
+    <div class="timeline-item">
+        <h3>2023 - Software Product Launches</h3>
+        <p>
+           I Created a browser named <span class="highlight" data-image="src/cwanda.png">Cwanda</span> and developed a chatting application, marking a milestone in My fullstack Skills.
+        </p>
+        <span class="tag software">Software</span>
+    </div>
+
+    <div class="timeline-item">
+    <h3>2024 - July STEM Training at ASYV</h3>
+    <p>
+        We Trained 30 students at Agahozo-Shalom Youth Village in STEM, sharing knowledge in <span class="highlight" data-image="src/stems.jpg">electronics</span> and also <span class="highlight" data-image="src/stemarduino.jpg">programming</span> . Earned a certificate for contributions.
+    </p>
+    <span class="tag education">Education</span>
+    </div>
+
+    <div class="timeline-item">
+    <h3>2024 - E-Yobora Home Automation System</h3>
+    <p>
+       I Developed <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/turikumana_ise_iri_koranabuhanga_e-_yobora_system_-f0706.jpg">E-Yobora </span>, an ESP8266-based home automation system that used WhatsApp messages to remotely control lights. Featured in an <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/turikumana_avuga_ko_afite_inzozi_zo_kugera_kure_hakagira_bimwe_mu_bikoresho_bikomoka_mu_rwanda_bicuruzwa_hanze_yarwo-af75e.jpg">interview with Igihe</span> News Website.
+    </p>
+    <span class="tag iot">IoT</span>
+    </div>
+
+
+    <div class="timeline-item">
+        <h3>2024 - Smart Systems & Data Management</h3>
+        <p>
+            I'm currently Developing the CSM—a data management system for schools and businesses.
+        </p>
+        <span class="tag iot">IoT</span>
+    </div>
+</section>
+
+
+
+
+    </div>
+
+    <section class="about">
+        <h2 class="about_title">About Me</h2>
+        <p class="about_substitle">I am a passionate electronics engineer and software developer with expertise in IoT, PCB design, web development, and automation.</p>
+        <a href="https://turikumanaisaie.Substack.com" class="about_btn">Subscribe Journey!</a>
+    </section>
+  
+    <footer class="footer">
+      <div class="footer_cover">
+        <div class="list brand">
+            <label class="footer_name">Isaie</label>
+        </div>
+        <div class="list links">
+            <h3 class="list_heading">USEFUL INFO</h3>
+            <nav class="footer_menu">
+            <ul>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#our">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="list information">
+            <h3 class="list_heading">CONTACTS</h3>
+          <div class="contact_info">
+
+            <div class="info_cover">
+                <i class='bx bxs-business'></i>
+                <p class="info_text"><a href="mailto:tieflab.twigasoft@gmail.com"></a>tieflab@gmail.com</p>
+            </div>
+            <div class="info_cover">
+                <i class='bx bxs-phone' ></i>
+                <p class="info_text">+250 781 281 828</p>
+            </div>
+            <div class="info_cover">
+                <i class='bx bxs-location-plus' ></i>
+                <p class="info_text">KG 767 Ava 51 St</p>
+            </div>
+            </div>
+        </div>
+        <div class="list socials">
+            <h3 class="list_heading">FOLLOW US</h3>
+            <div class="social_cover" onclick="window.location ='https://www.youtube.com/c/turikumanaisaie?sub_confirmation=1">
+                <i class='bx bxl-youtube' ></i>
+            </div>
+            <div class="social_cover" onclick="window.location ='https://www.linkedin.com/in/turikumanaisaie/">
+                <i class='bx bxl-linkedin-square' ></i>
+            </div>
+            <div class="social_cover" onclick="window.location ='https://www.instagram.com/turikumanaisaie/">
+                <i class='bx bxl-instagram-alt' ></i>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <div class="copywrite">
+     <p>&copy; 2025 Turikumana Isaie. All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
