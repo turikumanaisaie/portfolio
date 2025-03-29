@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 document.getElementById('qr-popup').style.display = 'block';
                 generateQRCode();
-            }, 8000); 
+            }, 80000); 
         }
 
         function closeQRPopup() {
