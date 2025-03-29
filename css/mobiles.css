@@ -1,0 +1,223 @@
+/*Created Sunday, March 28, 2025  by Turikumana Isaie*/
+/* Base responsive styles */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .timeline-item {
+        width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet styles */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 100px 5% 50px;
+    }
+    
+    .hero-content {
+        position: relative;
+        max-width: 100%;
+        bottom: auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .mehere {
+        position: relative;
+        right: auto;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .title-bar{
+        position: relative;
+        top: auto;
+        margin-top: -40%;
+        text-align: left;
+        padding: 20px;
+    }
+   .title-text{
+        position: absolute;
+        left: 20px;
+        font-size: 24px;
+    }
+
+    .changing-title{
+        font-size: 24px;
+        position: relative;
+        left: 20%;
+        bottom: 5px;
+    }
+    .features {
+        padding: 4rem 5%;
+    }
+    
+    .timeline::before {
+        right: 40px;
+    }
+    
+    .timeline-item {
+        width: 80%;
+        margin-left: 80px !important;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: -35px;
+        right: auto;
+    }
+    .list.brand, .list.socials, .list.links{
+        display: none;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Small tablet styles */
+    body{
+        height: auto;
+        width: 100%;
+    }
+    .nav{
+        position: fixed;
+        background: var(--pg-bg-color);
+        width: 100%;
+        top: 0;
+    }
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        bottom: 0;
+        width: 100%;
+        height: calc(100vh + 80px);
+        background: var(--pg-bg-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        overflow: hidden;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+    
+    .theme-toggle {
+        margin-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .roadmap_header {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile styles */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .timeline-item {
+        width: 90%;
+        margin-left: 50px !important;
+    }
+    
+    .timeline::before {
+        right: 30px;
+    }
+    
+    .title-bar {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+    
+    .changing-title {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+  /*  .copywrite p {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0 10px;
+    }*/
+}
+
+@media (max-width: 400px) {
+    /* Small mobile styles */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button, .about_btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .roadmap_title {
+        font-size: 1.8rem;
+    }
+    
+    .roadmap_subtitle {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    
+    .burger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .burger.active div:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+/* Ensure images are responsive */
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
