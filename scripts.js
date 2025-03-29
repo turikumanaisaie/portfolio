@@ -117,3 +117,34 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(changeTitle, 3000);
     }
 });
+
+   function isDesktop() {
+            return window.innerWidth > 768; // Adjust breakpoint as needed
+        }
+
+        function generateQRCode() {
+            let qrcodeContainer = document.getElementById("qrcode");
+            qrcodeContainer.innerHTML = ""; 
+            let qr = new QRCode(qrcodeContainer, {
+                text: "https://turikumanaisaie.vercel.app/",
+                width: 100,
+                height: 100
+            });
+            setTimeout(() => {
+                let img = document.createElement("img");
+                img.src = "src/isaie.png";
+                img.id = "overlay-img";
+                qrcodeContainer.appendChild(img);
+            }, 500);
+        }
+
+        if (isDesktop()) {
+            setTimeout(() => {
+                document.getElementById('qr-popup').style.display = 'block';
+                generateQRCode();
+            }, 8000); 
+        }
+
+        function closeQRPopup() {
+            document.getElementById('qr-popup').style.display = 'none';
+        }
