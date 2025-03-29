@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="src/isaie.png">
     <title>Turikumana Isaie ● Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobiles.css">
@@ -287,6 +288,11 @@
     <div class="copywrite">
      <p>&copy; 2025 Turikumana Isaie. All Rights Reserved.</p>
     </div>
+    <div id="qr-popup">
+        <button id="close-btn" onclick="closeQRPopup()"><i class='bx bx-x'></i></button>
+        <div id="qrcode"></div>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
