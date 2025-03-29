@@ -1,24 +1,3 @@
-:root {
-       /*     --primary-color: #14335f;
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --card-bg: #f8f9fa;
-            --a: lavender;
-            --b: #004377;
-            --c: lavender;
-            --transition: all 0.3s ease;
-        }
-
-        [data-theme="dark"] {
-            --primary-color: #6c63ff;
-            --bg-color: #14335f;
-            --text-color: #ffffff;
-            --card-bg: #14335f;
-
-            --a: #ffffff;
-            --b: #14335f;
-            --c: #153243;*/
-   }
 *{
     margin: 0;
     padding: 0;
