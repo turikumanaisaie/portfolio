@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleElement = document.getElementById('changingTitle');
     if (titleElement) {
         const roles = [
-           "an Inventor", "Electronics Engineer", "Software Developer", 
+           "Fouder Of ▱tieflab▰", "an Inventor", "Electronics Engineer", "Software Developer", 
            "Web Developer", "Copywriter", "Software Designer", "Digital Artist", "Graphics Designer",
            "Hardware Desinger", "Tech enthusiast", "3D Designer", "Programmer",  "Researcher", "Content Creator"
         ];
