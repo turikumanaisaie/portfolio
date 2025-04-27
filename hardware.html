@@ -26,6 +26,104 @@
     </div>
 </div>
     <!-- loader brand ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Anouncement -->
+    <div class="container">
+  <h3>Become an Expert in IoT, Programming, and Web Development!</h3>
+  <button class="register-btn" id="registerBtn">Register Now</button>
+  <div class="message" id="message">Redirecting you to the registration form...</div>
+</div>
+<style>
+    .container {
+      text-align: center;
+    }
+
+    .register-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: none; /* Hidden by default */
+    }
+
+    .register-btn:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+      display: none;
+    }
+</style>
+<script>
+  // Wait for 3 seconds after the page loads
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      // Show the button after 3 seconds
+      document.getElementById('registerBtn').style.display = 'inline-block';
+    }, 3000);
+  });
+
+  // When the button is clicked
+  document.getElementById('registerBtn').addEventListener('click', function() {
+    // Show redirecting message
+    document.getElementById('message').style.display = 'block';
+
+    // Wait another 3 seconds, then redirect
+    setTimeout(function() {
+      window.location.href = "https://forms.gle/zHb51s32BUGrUFw37"; // Change to your real event form link
+    }, 3000);
+  });
+</script>
+<!-- End Anouncement -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
     <nav class="nav">
         <div class="logo" onclick="window.location ='/'">
             <img src="src/tieflab.png" width="40px" class="name">
