@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/hardware.css">
     <link rel="stylesheet" type="text/css" href="css/mobiles.css">
-   <script type="text/javascript" src="scripts.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
     <!-- Loader branding -->
@@ -50,20 +52,18 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
-
 <!-- Announcement -->
 <div class="anounce_overlay" id="anounce_overlay">
   <div class="anounce_container" data-aos="zoom-in">
     <button class="close_btn" id="close_btn"><i class='bx bx-x'></i></button>
     <h3 class="anounce_message">Do you have an electronic device that needs repair?</h3>
-    <!-- <p class="anounce_paragraph">We’re here to help you bring it back to life. Our repair service is fast, affordable, and handled by professionals.</p> -->
     <button class="anounce_btn" id="anounce_btn">
       Apply for Repair <i class='bx bx-right-arrow-alt'></i>
     </button>
     <div class="anounceLoading_message" id="anounceLoading_message">
       We’re here to help you bring it back to life.
-      
-      Redirecting you to the Repair Request Form...
+
+      fill the Repair Request Form...
     </div>
   </div>
 </div>
@@ -87,37 +87,42 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(30px);
     border-radius: 20px;
-/*    width: 90%;*/
-    width: 400px;
+    width: 500px;
     padding: 30px 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     text-align: center;
-    font-family: 'Poppins', sans-serif;
   }
-
   .close_btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #2c2e4d;
-  }
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.close_btn:hover {
+  transform: scale(1.1);
+}
+
 
   .anounce_message {
-    font-size: 20px;
+    font-size: 17px;
     color: #131349;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
   }
-
- /* .anounce_paragraph {
-    font-size: 15px;
-    color: #333;
-    margin-bottom: 25px;
-  }
-*/
   .anounce_btn {
     background-color: #2c2e4d;
     color: white;
@@ -128,12 +133,14 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: none;
+    font-family: 'Poppins', sans-serif;
   }
 
   .anounce_btn i {
     vertical-align: middle;
     margin-left: 8px;
     font-size: 18px;
+    color: white;
   }
 
   .anounce_btn:hover {
@@ -145,6 +152,7 @@
     font-size: 14px;
     margin-top: 20px;
     display: none;
+    font-family: 'Poppins', sans-serif;
   }
 </style>
 
@@ -157,7 +165,18 @@
 
     // Handle apply button click
     document.getElementById('anounce_btn').addEventListener('click', function () {
+      // Hide all children inside the container
+      const container = document.querySelector('.anounce_container');
+      Array.from(container.children).forEach(child => {
+        if (!child.classList.contains('anounceLoading_message')) {
+          child.style.display = 'none';
+        }
+      });
+
+      // Show loading message
       document.getElementById('anounceLoading_message').style.display = 'block';
+
+      // Redirect after delay
       setTimeout(function () {
         window.location.href = "https://forms.gle/EGSRhB2jKAZsAHFR8";
       }, 3000);
