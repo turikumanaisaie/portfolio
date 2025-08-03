@@ -55,7 +55,7 @@
 <!-- Announcement -->
 <div class="anounce_overlay" id="anounce_overlay">
   <div class="anounce_container" data-aos="zoom-in">
-    <button class="close_btn" id="close_btn"><i class='bx bx-x'></i></button>
+    <div class="close-btn" id="close-btn"><i class='bx bx-x'></i></div>
     <h3 class="anounce_message">Do you have an electronic device that needs repair?</h3>
     <button class="anounce_btn" id="anounce_btn">
       Apply for Repair <i class='bx bx-right-arrow-alt'></i>
@@ -185,7 +185,7 @@
     });
 
     // Handle close button click
-    document.getElementById('close_btn').addEventListener('click', function () {
+    document.getElementById('close-btn').addEventListener('click', function () {
       document.getElementById('anounce_overlay').style.display = 'none';
     });
   });
