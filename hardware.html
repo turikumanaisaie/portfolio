@@ -48,7 +48,11 @@
 
 
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 <!-- Announcement -->
+<div class="anounce_overlay" id="anounce_overlay">
   <div class="anounce_container" data-aos="zoom-in">
     <button class="close_btn" id="close_btn"><i class='bx bx-x'></i></button>
     <h3 class="anounce_message">Do you have an electronic device that needs repair?</h3>
@@ -58,13 +62,14 @@
     </button>
     <div class="anounceLoading_message" id="anounceLoading_message">
       We’re here to help you bring it back to life.
-
+      
       Redirecting you to the Repair Request Form...
     </div>
   </div>
+</div>
 
 <style>
-  /*.anounce_overlay {
+  .anounce_overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -75,8 +80,7 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-    background-color: red;
-  }*/
+  }
 
   .anounce_container {
     position: relative;
@@ -166,7 +170,6 @@
   });
 </script>
 <!-- End Anouncement -->
-
 
 
 
