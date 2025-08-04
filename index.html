@@ -13,7 +13,31 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobiles.css">
-   
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+    </script>
 </head>
 <body>
     <!-- Loader branding -->
@@ -30,104 +54,6 @@
 </div>
 
     <!-- loader brand ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Anouncement -->
-   <!-- 
-    <div class="container">
-  <h3>Become an Expert in IoT, Programming, and Web Development!</h3>
-  <button class="register-btn" id="registerBtn">Register Now</button>
-  <div class="message" id="message">Redirecting you to the registration form...</div>
-</div>
-    -->
-<style>
-    /*.container {
-      text-align: center;
-    }
-
-    .register-btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: none; 
-    }
-
-    .register-btn:hover {
-      background-color: #45a049;
-    }
-
-    .message {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #333;
-      display: none;
-    }*/
-</style>
-<script>
-  // Wait for 3 seconds after the page loads
-//  window.addEventListener('DOMContentLoaded', function() {
-//    setTimeout(function() {
-      // Show the button after 3 seconds
- //     document.getElementById('registerBtn').style.display = 'inline-block';   }, 3000);
-//  });
-
-  // When the button is clicked
-//  document.getElementById('registerBtn').addEventListener('click', function() {
-    // Show redirecting message
-//    document.getElementById('message').style.display = 'block';
-
-    // Wait another 3 seconds, then redirect
-//    setTimeout(function() {
-//      window.location.href = "https://forms.gle/zHb51s32BUGrUFw37"; // Change to your real event form link  
-    //}, 3000);
- // });
-</script>
-<!-- End Anouncement -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 
     <div class="snowfall" id="snowfall"></div>
 
@@ -157,14 +83,14 @@
 
     <main class="main-content">
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up">
                 <h1 class="hero-title">I'm Profession, In Hardware and Software</h1>
                 <p class="hero-subtitle">
                     I am skilled in Software Dvelopment and electronics engineer with over 8 years in web development, Graphic design, IoT, PCB design and 3D Design.
                 </p>
                 <button class="cta-button" onclick="window.open('src/cv.pdf')">Download My CV</button>
             </div>
-            <div class="mehere">
+            <div class="mehere" data-aos="fade-up" data-aos-delay="200">
             <img src="src/mehere1.png">
 
              <div class="title-bar">
@@ -176,19 +102,19 @@
         </section>
 
       <section class="features" id="features">
-        <div class="feature-card" style="animation-delay: 0.2s">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
             <h3><i class='bx bxs-microchip' ></i> Electronics hardware</h3>
             <p>Innovations in Embeded System, IOT, CNC, Robotics, Drones, Laser cutting, ESPs, Arduino and Repear.</p>
         </div>
-        <div class="feature-card" style="animation-delay: 0.4s">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
             <h3><i class='bx bxs-collection' ></i> Software Development</h3>
             <p>Developing Desktop & Phone apps, Web design, Python, Node.js, Game and Embeded OS.</p>
         </div>
-        <div class="feature-card" style="animation-delay: 0.6s">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
             <h3><i class='bx bxs-user'></i> Me & My Tech life</h3>
             <p>This Portfolio is about my life, future, thoughts, innovations, my career and Languages.</p>
         </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up">
                 <h2>Electronics</h2>
                 <ul>
                     <li><i class='bx bx-chevron-right'></i> Soldering - 100%</li>
@@ -197,7 +123,7 @@
                     <li><i class='bx bx-chevron-right'></i> Design & Testing - 80%</li>
                 </ul>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                 <h2>Programming</h2>
                 <ul>
                     <li><i class='bx bx-chevron-right'></i> HTML CSS - 100%</li>
@@ -206,7 +132,7 @@
                     <li><i class='bx bx-chevron-right'></i> Javascript - 20%</li>
                 </ul>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
                 <h2>Languages</h2>
                 <ul>
                     <li><i class='bx bx-chevron-right'></i> Kinyarwanda (Native)</li>
@@ -223,7 +149,7 @@
       </style>
     </main>
         <!-- Skills Section (from previous version) -->
-     <div class="roadmap_header">
+     <div class="roadmap_header" data-aos="fade-up">
         <h2 class="roadmap_title">My Tech Career Roadmap (2018-2025)</h2>
         <p class="roadmap_subtitle">
             I am <span class="highlight" data-image="src/isaie.jpg">Isaie</span> a creative technologist,  skilled in
@@ -239,7 +165,7 @@
     </div>
    <section class="timeline">
     
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2018 - Electronics Beginnings</h3>
         <p>
             I Created a <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/h19a9420-04e22.jpg"> Paper radio project </span>, gained recognition from Igihe News and Flash TV, and received a  million <span class="highlight" data-image="https://igihe.com/IMG/arton104808.jpg">scholarships </span> along with a laptop from AC Group.
@@ -247,7 +173,7 @@
         <span class="tag hardware">Hardware</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
         <h3>2019 - Expanding Skill Set</h3>
         <p>
             I Joined the <span class="highlight" data-image="src/fablab.png">fablab Rwanda</span> got a <span class="highlight" data-image="src/hardware.jpg">membership </span> and studied CNC, laser cutting, Eagle PCB design, SolidWorks, and PCB assembly and Arduino.
@@ -255,7 +181,7 @@
         <span class="tag hardware">Hardware</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
         <h3>2020 - Building A Robotics</h3>
         <p>
            I Developed a <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaies-robot-1.jpg.webp">robot car</span> with various sensors also woonden <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaie-foran-huset-med-radioen-1.jpg">Clock </span>, and I had an interview with <span class="highlight" data-image="https://dkborn.unicef.dk/wp-content/uploads/2024/12/isaie-rasmus-og-sofie-med-robot-300x300.jpg">UNSEF Denmark</span>, and began studying programming and web development.
@@ -263,7 +189,7 @@
         <span class="tag robotics">Robotics</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
         <h3>2021 - Digital Content Creation</h3>
         <p>
             I Launched the <span class="highlight" data-image="src/software.png">Tief Software Lab</span> YouTube channel to teach web design and created a gas disaster prevention device.
@@ -271,7 +197,7 @@
         <span class="tag software">Software</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
         <h3>2022 - Electronics Tutorials</h3>
         <p>
            I Started another YouTube channel focused on <span class="highlight" data-image="src/hardware.png"> electronics </span> tutorials, expanding my tech educational Hobby.
@@ -279,7 +205,7 @@
         <span class="tag hardware">Hardware</span>
     </div>
 
-   <div class="timeline-item">
+   <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
     <h3>2022 - Gas Leak Detector</h3>
     <p>
         Designed a <span class="highlight" data-image="src/gas.png"> smart gas leak detector </span> to enhance home safety. The system alerted users to gas leaks, preventing hazards.
@@ -287,7 +213,7 @@
     <span class="tag hardware">Hardware</span>
   </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
         <h3>2023 - Software Product Launches</h3>
         <p>
            I Created a browser named <span class="highlight" data-image="src/cwanda.png">Cwanda</span> and developed a chatting application, marking a milestone in My fullstack Skills.
@@ -295,7 +221,7 @@
         <span class="tag software">Software</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
     <h3>2024 - July STEM Training at ASYV</h3>
     <p>
         We Trained 30 students at Agahozo-Shalom Youth Village in STEM, sharing knowledge in <span class="highlight" data-image="src/stems.jpg">electronics</span> and also <span class="highlight" data-image="src/stemarduino.jpg">programming</span> . Earned a certificate for contributions.
@@ -303,7 +229,7 @@
     <span class="tag education">Education</span>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
     <h3>2024 - E-Yobora Home Automation System</h3>
     <p>
        I Developed <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/turikumana_ise_iri_koranabuhanga_e-_yobora_system_-f0706.jpg">E-Yobora </span>, an ESP8266-based home automation system that used WhatsApp messages to remotely control lights. Featured in an <span class="highlight" data-image="https://mobile.igihe.com/local/cache-vignettes/L1000xH667/turikumana_avuga_ko_afite_inzozi_zo_kugera_kure_hakagira_bimwe_mu_bikoresho_bikomoka_mu_rwanda_bicuruzwa_hanze_yarwo-af75e.jpg">interview with Igihe</span> News Website.
@@ -312,7 +238,7 @@
     </div>
 
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
         <h3>2024 - Smart Systems & Data Management</h3>
         <p>
             I'm currently Developing the CSM—a data management system for schools and businesses.
@@ -321,12 +247,7 @@
     </div>
 </section>
 
-
-
-
-    </div>
-
-    <section class="about">
+    <section class="about" data-aos="fade-up">
         <h2 class="about_title">About Me</h2>
         <p class="about_substitle">I am a passionate electronics engineer and software developer with expertise in IoT, PCB design, web development, and automation.</p>
         <a href="https://turikumanaisaie.Substack.com" class="about_btn">Subscribe Journey!</a>
@@ -334,10 +255,10 @@
   
     <footer class="footer">
       <div class="footer_cover">
-        <div class="list brand">
+        <div class="list brand" data-aos="fade-up">
             <label class="footer_name">Isaie</label>
         </div>
-        <div class="list links">
+        <div class="list links" data-aos="fade-up" data-aos-delay="100">
             <h3 class="list_heading">USEFUL INFO</h3>
             <nav class="footer_menu">
             <ul>
@@ -349,7 +270,7 @@
             </ul>
         </nav>
         </div>
-        <div class="list information">
+        <div class="list information" data-aos="fade-up" data-aos-delay="200">
             <h3 class="list_heading">CONTACTS</h3>
           <div class="contact_info">
 
@@ -367,15 +288,15 @@
             </div>
             </div>
         </div>
-        <div class="list socials">
+        <div class="list socials" data-aos="fade-up" data-aos-delay="300">
             <h3 class="list_heading">FOLLOW US</h3>
-            <div class="social_cover" onclick="window.location ='https://www.youtube.com/c/turikumanaisaie?sub_confirmation=1">
+            <div class="social_cover" onclick="window.location ='https://www.youtube.com/c/turikumanaisaie?sub_confirmation=1'">
                 <i class='bx bxl-youtube' ></i>
             </div>
-            <div class="social_cover" onclick="window.location ='https://www.linkedin.com/in/turikumanaisaie/">
+            <div class="social_cover" onclick="window.location ='https://www.linkedin.com/in/turikumanaisaie/'">
                 <i class='bx bxl-linkedin-square' ></i>
             </div>
-            <div class="social_cover" onclick="window.location ='https://www.instagram.com/turikumanaisaie/">
+            <div class="social_cover" onclick="window.location ='https://www.instagram.com/turikumanaisaie/'">
                 <i class='bx bxl-instagram-alt' ></i>
             </div>
         </div>
@@ -393,5 +314,3 @@
     <script src="scripts.js"></script>
 </body>
 </html>
-
-
