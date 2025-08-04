@@ -55,7 +55,7 @@
 <!-- Announcement -->
 <div class="anounce_overlay" id="anounce_overlay">
   <div class="anounce_container" data-aos="zoom-in">
-    <div class="close-btn" id="close-btn"><i class='bx bx-x'></i></div>
+    <div class="anounceClose_btn" id="anounceClose_btn"><i class='bx bx-x'></i></div>
     <h3 class="anounce_message">Do you have an electronic device that needs repair?</h3>
     <button class="anounce_btn" id="anounce_btn">
       Apply for Repair <i class='bx bx-right-arrow-alt'></i>
@@ -85,14 +85,14 @@
   .anounce_container {
     position: relative;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(70px);
     border-radius: 20px;
     width: 500px;
     padding: 30px 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     text-align: center;
   }
-   .close-btn {
+   .anounceClose_btn {
   position: absolute;
   top: -15px;
   right: -15px;
@@ -103,10 +103,10 @@
   transition: transform 0.2s ease;
   z-index: 1000;
 }
-.close-btn i{ 
+.anounceClose_btn i{ 
   font-size: 20px;
 }
-.close-btn:hover {
+.anounceClose_btn:hover {
   transform: scale(1.1);
 }
 
@@ -176,7 +176,7 @@
     });
 
     // Handle close button click
-    document.getElementById('close-btn').addEventListener('click', function () {
+    document.getElementById('anounceClose_btn').addEventListener('click', function () {
       document.getElementById('anounce_overlay').style.display = 'none';
     });
   });
