@@ -432,6 +432,7 @@ h4 {
   }
    .anounceClose_btn {
   position: absolute;
+  background: tomato;
   top: -15px;
   right: -15px;
   width: 40px;
@@ -485,3 +486,4 @@ h4 {
     display: none;
     font-family: 'Poppins', sans-serif;
   }
+
