@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="src/isaie.png">
-    <title>Tief Software Lab ● Turikumana Isaie's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>▱tieflab▰ | Turikumana Isaie - Web Development, Software & SEO Services in Rwanda ● Tief Software Lab</title>
+
+<meta name="description" content="▱tieflab▰ by Turikumana Isaie offers professional web development, software solutions, SEO optimization, web design, course content creation, and graphics/logo design. Serving Kigali, Rwanda and global clients with modern, responsive, and SEO-friendly websites.">
+<meta name="keywords" content="▱tieflab▰, Turikumana Isaie, web development Rwanda, Kigali web design, software development, SEO services, website design, course content creation, graphics design, logo design, e-commerce websites, portfolio websites, business websites, digital solutions Rwanda, Tief Software Lab, IgaNaIT">
+<meta name="author" content="▱tieflab▰ - Turikumana Isaie">
+
+<link rel="canonical" href="https://turikumanaisaie.vercel.app/software">
+<link rel="icon" type="image/png" href="src/isaie.png">
+<link rel="shortcut icon" href="/isaie.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2563eb">
+<meta name="msapplication-TileColor" content="#2563eb">
+<meta name="theme-color" content="#2563eb">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://turikumanaisaie.vercel.app/software">
+<meta property="og:title" content="▱tieflab▰ | Web Development & Software Solutions - Turikumana Isaie">
+<meta property="og:description" content="Web & software development, SEO, graphics, and course content creation. ▱tieflab▰ by Turikumana Isaie builds modern websites, apps, and digital solutions in Rwanda and worldwide.">
+<meta property="og:image" content="https://turikumanaisaie.vercel.app/images/tieflab-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="▱tieflab▰ - Tief Software Lab">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://turikumanaisaie.vercel.app/software">
+<meta name="twitter:title" content="▱tieflab▰ | Turikumana Isaie - Web & SEO Development Services">
+<meta name="twitter:description" content="Build modern websites, SEO-optimized software, graphics & content creation with ▱tieflab▰ | Turikumana Isaie in Kigali, Rwanda.">
+<meta name="twitter:image" content="https://turikumanaisaie.vercel.app/images/tieflab-twitter.jpg">
+<meta name="twitter:creator" content="@TiefSoftwareLab">
+
+<!-- SEO & Robots -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta http-equiv="Cache-Control" content="public, max-age=3600">
+<meta http-equiv="Pragma" content="public">
+<meta http-equiv="Expires" content="Thu, 10 Jul 2026 01:00:00 GMT">
+
+<!-- Mobile App / PWA -->
+<meta name="theme-color" content="#2563eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="▱tieflab▰ - Software & Web Development">
+
+
+
+
+
+
+
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/software.css">
     <link rel="stylesheet" type="text/css" href="css/mobiles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
@@ -37,7 +94,72 @@
 
 
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
+<!-- Announcement -->
+<div class="anounce_overlay" id="anounce_overlay">
+  <div class="anounce_container" data-aos="zoom-in">
+    <div class="anounceClose_btn" id="anounceClose_btn"><i class='bx bx-x'></i></div>
+    <h3 class="anounce_message">Do you want a website for your business, portfolio, blog, or any idea?</h3>
+    <button class="anounce_btn" id="anounce_btn">
+      Request Website <i class='bx bx-right-arrow-alt'></i>
+    </button>
+    <div class="anounceLoading_message" id="anounceLoading_message">
+      We build websites of any kind: Business, Portfolio, E‑commerce, Blogs, Schools, NGOs, and more.
+      <br/>
+      Redirecting you to the Website Request Form...
+    </div>
+  </div>
+</div>
+
+<style>
+  .anounceClose_btn {
+    background: #2563eb !important;
+  }
+  .anounce_btn {
+    background:#2563eb !important;
+  }
+  .anounce_btn:hover { 
+    background:#1e40af !important; }
+  .anounceLoading_message {
+   color:#2563eb !important; 
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    // Show request button after 3 seconds
+    setTimeout(function () {
+      document.getElementById('anounce_btn').style.display = 'inline-block';
+    }, 3000);
+
+    // Handle request button click
+    document.getElementById('anounce_btn').addEventListener('click', function () {
+      // Hide all children inside the container except loading
+      const container = document.querySelector('.anounce_container');
+      Array.from(container.children).forEach(child => {
+        if (!child.classList.contains('anounceLoading_message')) {
+          child.style.display = 'none';
+        }
+      });
+
+      // Show loading message
+      document.getElementById('anounceLoading_message').style.display = 'block';
+
+      // Redirect after delay
+      setTimeout(function () {
+        window.location.href = "https://forms.gle/5JZeeVoApPCkB9GUA"; 
+      }, 3000);
+    });
+
+    // Handle close button click
+    document.getElementById('anounceClose_btn').addEventListener('click', function () {
+      document.getElementById('anounce_overlay').style.display = 'none';
+    });
+  });
+</script>
+<!-- End Announcement -->
 
 
 
@@ -297,4 +419,5 @@
         <!-- <script src="scripts.js"></script> -->
 </body>
 </html>
+
 
